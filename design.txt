@@ -1,0 +1,42 @@
+Class Journal
+
+Attributes:
+- list of entries
+
+Methods:
+- display entries
+- save entries
+- load entries
+- add new entry
+
+Class Entry
+
+Attributes:
+- date
+- prompt
+- response
+- author
+
+Methods:
+- password protect entry
+
+Class PromptGenerator
+
+Attributes:
+- list of prompts
+
+Methods:
+- get random prompt
+- add new prompt
+
+Class Menu (main)
+Attributes:
+- Journal
+- PromptGenerator
+
+Methods:
+- display Menu
+    menu options:
+    - write (gives you random prompt; allows you to write and save response)
+    - display (shows all entries in currently loaded journal)
+    - load (loads all entries from a save file)
