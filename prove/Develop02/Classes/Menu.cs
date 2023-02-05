@@ -68,7 +68,7 @@ public class Menu
                     string response2 = Console.ReadLine();
                     if (response2 == "yes")
                     {
-                    entryList = _journal.loadFile();
+                        entryList = _journal.loadFile();
                     }
                     else
                     {
