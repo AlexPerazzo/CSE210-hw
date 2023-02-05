@@ -4,30 +4,30 @@ Attributes:
 - list of entries
 
 Methods:
-- display entries
+
 - save entries
 - load entries
 - add new entry
 
-Class Entry
+    Class Entry
 
-Attributes:
-- date
-- prompt
-- response
-- author
+    Attributes:
+    - date
+    - prompt
+    - response
+    - author
 
-Methods:
-- password protect entry
+    Methods:
+    - display entries
 
-Class PromptGenerator
+        Class PromptGenerator
 
-Attributes:
-- list of prompts
+        Attributes:
+        - list of prompts
 
-Methods:
-- get random prompt
-- add new prompt
+        Methods:
+        - get random prompt
+        - add new prompt
 
 Class Menu (main)
 Attributes:

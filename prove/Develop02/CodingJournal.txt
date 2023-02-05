@@ -1,0 +1,24 @@
+Date: 2/5/2023 10:12 AM
+Prompt: What was the strongest emotion I felt today?
+Entry: Achy
+Author: atp
+
+
+Date: 2/5/2023 10:12 AM
+Prompt: What was the best part of your day?
+Entry: Sleeping
+Author: atp
+
+
+Date: 2/5/2023 10:13 AM
+Prompt: What was the strongest emotion I felt today?
+Entry: foo
+Author: foo
+
+
+Date: 2/5/2023 10:54 AM
+Prompt: Write one word to describe your day.
+Entry: foo
+Author: fjdois;
+
+

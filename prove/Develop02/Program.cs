@@ -1,12 +1,16 @@
 using System;
-
+using Develop02.Classes;
 class Program
 {
+
+
+
+
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
-        PromptGenerator PromptGenerator = new PromptGenerator();
-        string prompt = PromptGenerator.GetRandomPrompt();
-        Console.WriteLine(prompt);
+        Menu menu = new Menu();
+        List<string> list = menu.startUp();
+        menu.menu(list);
     }
 }
