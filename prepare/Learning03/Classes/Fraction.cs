@@ -46,8 +46,20 @@ namespace Learning03.Classes
 
         public string GetFractionString()
         {
-            return "";
+            int numerator = GetTop();
+            int denominator = GetBottom();
+            return $"{numerator}/{denominator}";
         }
+
+        public double GetDecimalValue()
+        {
+            double numerator = GetTop();
+            double denominator = GetBottom();
+            double answer = numerator / denominator;
+            return answer;
+        }
+
+
     }
 
 
