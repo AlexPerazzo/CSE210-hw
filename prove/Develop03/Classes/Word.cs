@@ -6,7 +6,11 @@ namespace Develop03.Classes
         private string _singleWord;
         private bool _isHidden;
 
-
+        public Word(string word)
+        {
+            _singleWord = word;
+            _isHidden = false;
+        }
 
         public string HideWord()
         {
