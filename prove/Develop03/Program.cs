@@ -10,6 +10,23 @@ class Program
         Console.WriteLine("2. Moroni 7:45");
         Console.WriteLine("3. Mosiah 3:19");
         Console.Write("> ");
-        Console.ReadLine();
+        string i = Console.ReadLine();
+        int answer = int.Parse(i);
+
+        if (answer == 1)
+        {
+            Console.Write("");
+        }
+
+        else if (answer == 2)
+        {
+            Console.Write("");
+        }
+
+        else if (answer == 3)
+        {
+            Console.Write("");
+        }
+
     }
 }

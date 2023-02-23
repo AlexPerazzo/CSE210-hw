@@ -13,6 +13,7 @@ namespace Develop03.Classes
             List<Word> instanceList = new List<Word>();
             Random random = new Random();
             int ranIndex = random.Next(0, 3);
+            
             string[] words = _scripture[ranIndex].Split(" ");
             foreach (string i in words)
             {
