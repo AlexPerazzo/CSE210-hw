@@ -24,16 +24,24 @@ namespace Develop03.Classes
             Console.Write(_singleWord);
             Console.Write(" ");
         }
-        public string HideWord()
+        public Word HideWord()
         {
             List<string> underscoreList = new List<string>();
             int length = _singleWord.Length;
-            for (int i = 0; i < length; i++)
+            foreach (char letter in _singleWord)
             {
+                if (char.IsLetter(letter))
+                {
                 underscoreList.Add("_");
+                }
+                else
+                {
+                    underscoreList.Add($"{letter}");
+                }
             }
             string underscore = string.Join("", underscoreList);
-            return underscore;
+            Word newWord = new Word(underscore, true);
+            return newWord;
         }
 
         public string GetSingleWord()

@@ -8,13 +8,13 @@ namespace Develop03.Classes
         private List<int> _isHiddenList = new List<int>();
 
         private List<string> _keyList = new List<string>() { "Helaman 5:12", "Moroni 7:45", "Mosiah 3:19" };
-        private string _reference;
 
-        public List<Word> splitWords(int index)
+        public (List<Word>, Reference) SplitWords(int index)
         {
             List<Word> instanceList = new List<Word>();
 
             string scriptureKey = _keyList[index - 1];
+            Reference reference = new Reference(scriptureKey);
 
             string[] words = _scripture[scriptureKey].Split(" ");
             foreach (string i in words)
@@ -22,16 +22,64 @@ namespace Develop03.Classes
                 Word word = new Word(i);
                 instanceList.Add(word);
             }
-            return instanceList;
+            return (instanceList, reference);
         }
 
 
-        public void DisplayScripture(List<Word> instanceList)
+        public void DisplayScripture(List<Word> instanceList, Reference reference)
         {
+            Console.Clear();
+            Console.WriteLine(reference.GetReference());
             foreach (Word word in instanceList)
             {
                 word.DisplayWord();
             }
         }
+
+        public bool CheckHiddenWords(List<Word> instanceList)
+        {
+            int count = 0;
+            foreach (Word word in instanceList)
+            {
+                if (word.GetIsHidden())
+                {
+                    count++;
+                }
+            }
+
+            if (count != instanceList.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public List<Word> HideWords(List<Word> instanceList, int numOfWords)
+        {
+            for (int j = 0; j < numOfWords; j++)
+            {
+                Random random = new Random();
+                int index = random.Next(0, instanceList.Count);
+                bool work = CheckHiddenWords(instanceList);
+
+                if (work)
+                {
+                    if (instanceList[index].GetIsHidden() == false)
+                    {
+                        Word underscore = instanceList[index].HideWord();
+                        instanceList[index] = underscore;
+                    }
+                    else
+                    {
+                        j--;
+                    }
+                }
+
+            }
+            return instanceList;
+        }
+
     }
 }
