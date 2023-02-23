@@ -12,6 +12,18 @@ namespace Develop03.Classes
             _isHidden = false;
         }
 
+        public Word(string word, bool hidden)
+        {
+            _singleWord = word;
+            _isHidden = true;
+        }
+
+
+        public void DisplayWord()
+        {
+            Console.Write(_singleWord);
+            Console.Write(" ");
+        }
         public string HideWord()
         {
             List<string> underscoreList = new List<string>();
