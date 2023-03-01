@@ -10,9 +10,9 @@ Class Activity
     Methods:
         LoadingScreen(int): void // creates loading animation for ___ seconds
         CountDownFrom(int): void // displays numbers counting down from ___ seconds
-        StartActivity(): void // prints out summary w/ name and description; calls base.LoadingScreen(5)
+        StartActivity(): void // prints out summary w/ name and description; calls LoadingScreen(5)
         SetDurationFromInput(): void // sets _duration from user input
-        EndMessage(): void // prints out summary of exercise w/ name and duration; calls base.LoadingScreen(5)
+        EndMessage(): void // prints out summary of exercise w/ name and duration; calls LoadingScreen(5)
 
 Class BreathingActivity : Activity
     Attributes:
@@ -47,8 +47,8 @@ Class ReflectingActivity : Activity
         ReflectingActivity() : base("Reflection Activity","This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.") 
 
     Methods:
-        DisplayPrompt(): void // select a prompt from _promptList, display it for the user, and call base.LoadingScreen(_duration/2)
-        DisplayQuestion(): void // select and display prompt from _questionList, display it for the user, and call base.LoadingScreen(_duration/2)
+        DisplayPrompt(): void // select a prompt from _promptList, display it for the user, and call LoadingScreen(_duration/2)
+        DisplayQuestion(): void // select and display prompt from _questionList, display it for the user, and call LoadingScreen(_duration/2)
         Finishing message base.EndMessage
     
 Class ListingActivity : Activity
@@ -64,7 +64,7 @@ Class ListingActivity : Activity
         ListingActivity(): base("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
         
     Methods:
-        GeneratePrompt(): string // Gets a random item out of _promptList and prints it on screen
+        GeneratePrompt(): void // Gets a random item out of _promptList and prints it on screen
         UserListsItems(): List<string> of user input //  Prompts user for answers to question for _duration amount of times
         DisplayNumItems(): int // Displays the number of items in the List returned by UserListsItems
 
