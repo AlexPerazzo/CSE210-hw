@@ -17,12 +17,26 @@ namespace Develop04.Classes
 
         public void LoadingScreen(int num)
         {
-            Console.WriteLine("Please Wait.  ");
-            Console.Clear();
-            Console.WriteLine("Please Wait . ");
-            Console.Clear();
-            Console.WriteLine("Please Wait  .");
-            Console.Clear();
+            DateTime currentTime = DateTime.Now;
+            DateTime futureTime = currentTime.AddSeconds(num);
+
+            Console.Write("Please Wait");
+            while (currentTime < futureTime)
+            {
+                Console.Write("   ");
+                Console.Write("\b\b\b   \b\b\b");                
+                Thread.Sleep(300);
+                Console.Write(".");
+                Thread.Sleep(300);
+                Console.Write("\b \b");
+                Console.Write("..");
+                Thread.Sleep(300);
+                Console.Write("\b\b  \b\b");
+                Console.Write("...");
+                Thread.Sleep(300);
+                Console.Write("\b\b\b   \b\b\b");
+                currentTime = DateTime.Now;
+            }
         }
 
         public void CountDownFrom(int num)
