@@ -14,7 +14,15 @@ namespace Develop04.Classes
 
         public override void Execute()
         {
-            base.Execute();
+            StartActivity();
+            Console.Write("Get Ready ");
+            LoadingScreen(3);
+            Console.WriteLine("");
+            GeneratePrompt();
+            List<string> items = UserListsItems();
+            Console.WriteLine("");
+            DisplayNumItems(items);
+            EndMessage();
         }
 
         public void GeneratePrompt()
@@ -26,12 +34,23 @@ namespace Develop04.Classes
 
         public List<string> UserListsItems()
         {
-            return new List<string>() { "" };
+            List<string> list = new List<string>();
+            DateTime currentTime = DateTime.Now;
+            DateTime futureTime = currentTime.AddSeconds(_duration);
+
+            while (currentTime < futureTime)
+            {
+                string item = Console.ReadLine();
+                list.Add(item);
+                currentTime = DateTime.Now;
+            }
+
+            return list;
         }
 
-        public int DisplayNumItems()
+        public void DisplayNumItems(List<string> list)
         {
-            return 5;
+            Console.WriteLine($"Congrats! You wrote {list.Count()} items!");
         }
     }
 }

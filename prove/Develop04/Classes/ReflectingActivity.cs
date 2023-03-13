@@ -33,8 +33,16 @@ namespace Develop04.Classes
             while (time > 0)
             {
                 DisplayQuestion();
+                if (time >=8)
+                {
                 LoadingScreen(8);
                 time = time - 8;
+                }
+                else
+                {
+                    LoadingScreen(time);
+                    time = time - 8;
+                }
             }
             EndMessage();
         }

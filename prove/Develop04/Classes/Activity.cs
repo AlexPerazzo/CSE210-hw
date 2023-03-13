@@ -13,10 +13,10 @@ namespace Develop04.Classes
         }
 
         public Activity()
-        {}
+        { }
 
         public virtual void Execute()
-        {}
+        { }
         public void LoadingScreen(int num)
         {
             DateTime currentTime = DateTime.Now;
@@ -45,9 +45,9 @@ namespace Develop04.Classes
         {
             for (int i = 0; i < num; i++)
             {
-            Console.Write($"{num - i}");
-            Thread.Sleep(1000);
-            Console.Write("\b \b");
+                Console.Write($"{num - i}");
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
             }
         }
 
@@ -71,7 +71,7 @@ namespace Develop04.Classes
         {
             Console.WriteLine("Well Done!!");
             Console.WriteLine("");
-            Console.Write($"You have completed another {_duration} seconds of the {_activityName}.");
+            Console.Write($"You have completed {_duration} seconds of the {_activityName}.");
         }
     }
 }
