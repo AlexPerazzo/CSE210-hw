@@ -22,14 +22,40 @@ namespace Develop04.Classes
         public ReflectingActivity() : base("Reflection Activity","This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.")
         {}
 
+        public override void Execute()
+        {
+            StartActivity();
+            DisplayPrompt();
+            Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
+            Console.Write("You may begin in: ");
+            CountDownFrom(5);
+            int time = _duration;
+            while (time > 0)
+            {
+                DisplayQuestion();
+                LoadingScreen(8);
+                time = time - 8;
+            }
+            EndMessage();
+        }
+
         public void DisplayPrompt() 
         {
-
+            Random random = new Random();
+            int num = random.Next(0, _promptList.Count() - 1);
+            Console.WriteLine($"--- {_promptList[num]} ---");
+            Console.WriteLine("");
+            Console.Write("When you have something in mind, press enter to continue.");
+            Console.ReadLine();
         }
 
         public void DisplayQuestion()
         {
-
+            Random random = new Random();
+            int num = random.Next(0, _questionList.Count() - 1);
+            Console.WriteLine("");
+            Console.WriteLine(_questionList[num]);
+            Console.WriteLine("");
         }
 
         

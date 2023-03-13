@@ -12,6 +12,11 @@ namespace Develop04.Classes
         public ListingActivity() : base("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
         { }
 
+        public override void Execute()
+        {
+            base.Execute();
+        }
+
         public void GeneratePrompt()
         {
             Random random = new Random();
