@@ -11,7 +11,11 @@ class Program
         activities["3"] = new ListingActivity();
 
         string response = "";
+
         Activity activity = new Activity();
+
+        int count = 0;
+
         while (response != "4")
         {
             Console.WriteLine("");
@@ -27,11 +31,24 @@ class Program
             if (response == "1" || response == "2" || response == "3")
             {
                 activities[response].Execute();
+                count += 1;
             }
             else if (response != "4")
             {
                 Console.WriteLine("Invalid response, reloading options.");
             }
+            else if (response == "4")
+            {
+                if (count != 1)
+                {
+                    Console.WriteLine($"Thanks for coming, you did {count} activities! Great job!");
+                }
+                else
+                {
+                    Console.WriteLine($"Thanks for coming, you did {count} activity! Great job!");
+                }
+            }
+
         }
 
     }
