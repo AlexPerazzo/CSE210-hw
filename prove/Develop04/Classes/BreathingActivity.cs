@@ -2,8 +2,6 @@ namespace Develop04.Classes
 {
     public class BreathingActivity : Activity
     {
-        public BreathingActivity() : base("Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.")
-        { }
 
         public override void Execute()
         {
@@ -14,6 +12,8 @@ namespace Develop04.Classes
             BreatheInAndOut();
             EndMessage();
         }
+        public BreathingActivity() : base("Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.")
+        { }
         public void BreatheInAndOut()
         {
             int time = _duration;
