@@ -1,0 +1,53 @@
+Order Class:
+Attributes:
+    _products: List of Product instances
+    _customer: Instance of the Customer class
+    
+Methods:
+    ReturnTotalCost: returns a float that is the sum of the prices of each product plus a one-time shipping cost (which is obtained by using DetermineShippingCost)
+    DetermineShippingCost: returns an int of 5 if customer is in USA or 35 if they are ReturnNumOfComments
+    CreatePackingLabel: returns string of name and product id of each product in the Order
+    CreateShippingLabel: returns string of the name and address of the customer
+
+
+
+
+
+Product Class:
+Attributes:
+    _name: string of name of Product
+    _productid: int of the product's id
+    _price: float of price of product
+    _quantity: int of how many of the product there are
+
+Methods:
+    ReturnTotalPrice: returns float by multiplying the price and the quantity
+
+
+
+
+Customer Class:
+Attributes:
+    _name: string of the customer's name
+    _address: Address instance of customer's address
+
+Methods:
+    IsInUSA: Calls the IsInUSA method in the address class on _address.
+
+Constructor:
+    Customer(_name, _address)
+
+
+Address Class:
+Attributes:
+    _streetAddress: string of street address
+    _city: string of the city
+    _state/province: string of the state/province
+    _country: string of the country
+
+Methods:
+    IsInUSA: Returns true if address is in the USA
+    DisplayFullAddress: Displays the street address, the city, state/province, and country (with appropriate whitespace)
+
+Constructor:
+    Address(_streetAddress, _city, _state/province, _country)
