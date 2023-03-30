@@ -1,0 +1,29 @@
+Abstraction with YouTube Videos
+
+Video Class:
+Attributes:
+    _title: string of title of Video
+    _author: string of author's name
+    _length: int of number of seconds
+    _comments: List of Comment instances
+
+Methods:
+    ReturnNumOfComments: Returns number of comments in _comments
+    AddComment: Adds a comment to _comments
+    DisplayVideoInfo: Displays _title, _author, _length, DisplayNumOfComments, and then displays all comments in _comments.
+
+Constructor:
+    Video(_title, _author, _length)
+
+
+Comment Class:
+Attributes:
+    _commenter: string of name of person who commented
+    _comment: string of the comment itself
+
+Method:
+    DisplayCommentInfo: Displays _commenter and _comment
+
+Constructor:
+    Comment(_commenter, _comment)
+
