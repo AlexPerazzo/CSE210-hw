@@ -1,14 +1,11 @@
-using System;
-using namespace Foundation2.Classes
+namespace Foundation2.Classes
 {
-    
-
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Foundation2 World!");
+    public class Populate
+    {   
+        public Populate()
+        {}
+        
+        
         Address address1 = new Address("159 Happy Place", "Rexburg", "Idaho", "USA");
         Address address2 = new Address("789 Basket Road", "Houston", "Ontario", "Canada");
 
@@ -34,8 +31,5 @@ class Program
         order2.AddProduct(product4);
         order2.AddProduct(product5);
         order2.AddProduct(product6);
-    
-
     }
-}
 }
