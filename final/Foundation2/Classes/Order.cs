@@ -2,7 +2,7 @@ namespace Foundation2.Classes
 {
     public class Order
     {
-        private List<Product> _products;
+        private List<Product> _products = new List<Product>();
         private Customer _customer;
 
         public Order(Customer customer)
@@ -20,7 +20,7 @@ namespace Foundation2.Classes
             string name = _customer.GetName();
             Address address = _customer.GetAddress();
             string fulladdress = address.GetFullAddress();
-            string label = $"{name}; {fulladdress}";
+            string label = $"{name} lives at \n {fulladdress}.";
 
             return label;
         }
@@ -33,7 +33,7 @@ namespace Foundation2.Classes
                 string name = product.GetName();
                 string productid = product.GetProductID();
 
-                string item = $"{name}: {productid}";
+                string item = $"{name}; Product ID: {productid}";
                 everything.Add(item);
             }
 
@@ -41,7 +41,7 @@ namespace Foundation2.Classes
             return result;
         }
 
-        public int DetermineShippingCost()
+        private int DetermineShippingCost()
         {
             if (_customer.IsInUSA())
             {
@@ -53,10 +53,10 @@ namespace Foundation2.Classes
             }
         }
 
-        public float ReturnTotalCost()
+        public double ReturnTotalCost()
         {
-            float shipping;
-            float total = 0;
+            double shipping;
+            double total = 0;
             foreach (Product product in _products)
             {
                 total += product.ReturnTotalPrice();
