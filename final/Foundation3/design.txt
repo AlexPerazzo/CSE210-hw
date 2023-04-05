@@ -1,0 +1,60 @@
+Event Class:
+Attributes:
+    _eventTitle: string of the title of the Event
+    _description: string of the description of the Event
+    _date: string of the date of the Event
+    _time: string of the time of the Event
+    _address: instance of an Address class
+
+Methods:
+    ReturnStandardDetails():  Returns string of the title, description, date, time, and address
+    ReturnFullDetails(): virtual method that will be overridden
+    ReturnShortDesc(): virtual method that will be overridden
+
+Constructor:
+    Event(_eventTitle, _description, _date, _time, _address)
+
+
+
+Lecture Class: (Inherits from Event Class)
+Attributes:
+    _speakerName: string of the name of the speaker
+    _capacity: int of the capacity of the Lecture
+
+Constructor:
+    Lecture(_speakerName, _capacity, _eventTitle, _description, _date, _time, _address) : base(_eventTitle, _description, _date, _time, _address)
+
+
+
+Reception Class: (Inherits from Event Class)
+Attributes:
+    _rsvpEmail: string of the email at which to RSVP
+
+
+
+OutdoorGathering Class: (Inherits from Event Class)
+Attributes:
+    _weather: string of what the weather will be like
+
+
+
+Address Class:
+Attributes:
+    _streetAddress: string of street address
+    _city: string of the city
+    _stateprovince: string of the state/province
+    _country: string of the country
+
+Methods:
+    
+    DisplayFullAddress: Displays the street address, the city, state/province, and country (with appropriate whitespace)
+    GetFullAddress: Returns what DisplayFullAddress would display
+
+Constructor:
+    Address(_streetAddress, _city, _state/province, _country)
+
+
+
+
+
+
