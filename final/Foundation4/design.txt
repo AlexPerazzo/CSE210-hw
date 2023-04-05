@@ -1,0 +1,54 @@
+Activity Class:
+Attributes:
+    _date: string of date the activity took place
+    _length: double of how many minutes the activity was done
+
+
+Methods:
+    Virutal GetDistance: Returns Distance travelled; will be overrided
+    Virtual GetSpeed: Returns the Speed you're going; will be overrided
+    Virtual GetPace: Returns the Pace you're going; will be overrided
+    DisplaySummary: Displays a summary of info in form of: 03 Nov 2022 Running (30 min)- Distance 3.0 kilometer, Speed 6.0 kmph, Pace: 10.0 min per kilometer
+
+
+
+
+Running Class: (inherits from activity)
+Attributes:
+    _distance: double of how many kilometers were travelled
+
+Methods:
+    Override GetDistance
+    Override GetSpeed
+    Override GetPace
+
+Constructor:
+    Running(_distance, (base attributes))
+
+
+
+StationaryBike Class: (inherits from activity)
+Attributes:
+    _speed: double of how many kmph you are going
+
+Methods:
+    Override GetDistance
+    Override GetSpeed
+    Override GetPace
+
+Constructor:
+    StationaryBike(_speed, (base attributes))
+
+
+
+Swimming Class: (inherits from activity)
+Attributes:
+    _numOfLaps: double of how many laps you did
+
+Methods:
+    Override GetDistance
+    Override GetSpeed
+    Override GetPace
+
+Constructor:
+    Swimming(_numOfLaps, (base attributes))
